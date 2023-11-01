@@ -73,13 +73,16 @@ img {
 </div>
 
 <script>
-const noButton = document.querySelector('.no-button');
+// const noButton = document.querySelector('.no-button');
 
-noButton.addEventListener('mouseover', function() {
-  const randomX = Math.floor(Math.random() * 60) + 20; // Random position between 20% and 80%
-  const randomY = Math.floor(Math.random() * 60) + 20; // Random position between 20% and 80%
-  this.style.left = randomX + '%';
-  this.style.top = randomY + '%';
+// noButton.addEventListener('mouseover', function() {
+//   const randomX = Math.floor(Math.random() * 60) + 20; // Random position between 20% and 80%
+//   const randomY = Math.floor(Math.random() * 60) + 20; // Random position between 20% and 80%
+//   this.style.left = randomX + '%';
+//   this.style.top = randomY + '%';
+// });
+document.querySelector('.no-button').addEventListener('click', function() {
+  alert('FUCK! BITCH');
 });
 
 document.querySelector('.yes-button').addEventListener('click', function() {
