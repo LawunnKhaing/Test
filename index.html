@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hi Petra</title>
+<style>
+body {
+  background: linear-gradient(to bottom right, #64b5f6, #9575cd); /* Gradient background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  font-family: Candara, Oswald;
+}
+
+p {
+  font-size: 32px;
+}
+
+img {
+  width: 75%; /* Increased image size further */
+  max-width: 750px;
+  display: block;
+  margin: 20px auto;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-family: Candara, Oswald;
+  font-size: 16px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.yes-button {
+  background-color: #4CAF50;
+}
+
+.no-button {
+  background-color: #FF5733;
+  position: relative;
+}
+
+.button:hover {
+  background-color: #1e88e5;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <p>I understand that it didn't work out well last time.</p>
+  <p>I'm sorry. So if possible could you please give me one more chance?</p>
+  <img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif" alt="Begging Cat GIF">
+  <div id="buttonContainer">
+    <button class="button yes-button">YES!</button>
+    <button class="button no-button">NO</button>
+  </div>
+</div>
+
+<script>
+const noButton = document.querySelector('.no-button');
+
+noButton.addEventListener('mouseover', function() {
+  const randomX = Math.floor(Math.random() * 60) + 20; // Random position between 20% and 80%
+  const randomY = Math.floor(Math.random() * 60) + 20; // Random position between 20% and 80%
+  this.style.left = randomX + '%';
+  this.style.top = randomY + '%';
+});
+
+document.querySelector('.yes-button').addEventListener('click', function() {
+  alert('YAYY THANK U! Excited to meet you');
+});
+</script>
+</body>
+</html>
